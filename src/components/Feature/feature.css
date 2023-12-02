@@ -1,0 +1,47 @@
+.border-gradient {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 1px;
+  }
+  .border-gradient-purple {
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  }
+
+.pisence__about-container__feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 200px;
+}
+
+.pisence__about-container__feature-icon span{
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+}
+
+.pisence__about-container__feature-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pisence__about-container__feature-heading h3 {
+    font-size: 25px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.pisence__about-container__feature-text {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.pisence__about-container__feature-text p {
+    color: var(--color-text);
+    text-align: center;
+    font-size: 18px;
+}
