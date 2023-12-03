@@ -1,0 +1,73 @@
+.pisence__services-container__service {
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.pisence__services-container__service-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pisence__services-container__service-content__heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.pisence__services-container__service-content__heading h3 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+}
+
+.pisence__services-container__service-content__text {
+    display: flex;
+    flex: 3;
+}
+
+.pisence__services-container__service-content__text p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14x;
+    line-height: 30px;
+    color: var(--color-text);
+    text-align: justify;
+}
+
+.pisence__services-container__service-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.pisence__services-container__service-image img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width : 950px) {
+    .pisence__services-container__service {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width : 550px) {
+    .pisence__services-container__service-content__heading {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .pisence__services-container__service-content__text {
+        font-size: 12px;
+        line-height: 20px;
+    }
+} 

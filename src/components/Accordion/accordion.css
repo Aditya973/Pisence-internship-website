@@ -1,0 +1,62 @@
+.pisence__accordion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    
+    margin: 1rem;
+}
+
+.pisence__accordion-title {
+    flex: 1;
+    margin: 2rem;
+}
+
+.pisence__accordion-title h1 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.pisence__accordion-title div {
+    width: 38px;
+    height: 3px;
+    background: var(--gradient-bar);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 0.25rem;
+}
+
+.pisence__accordion-text {
+    flex: 2;
+    display: flex;
+}
+
+.pisence__accordion-text p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14x;
+    line-height: 30px;
+    color: var(--color-text);
+    text-align: justify;
+}
+
+@media screen and (max-width : 550px) {
+    .pisence__accordion-title h1 {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .pisence__accordion-text p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .pisence__accordion {
+        margin: 1rem 0;
+    }
+}

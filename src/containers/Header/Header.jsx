@@ -4,7 +4,7 @@ import monitoring from '../../assets/iot.png';
 import { TypeAnimation } from 'react-type-animation';
 
 const sequence = [
-  'End-to-End IoT Monitoring', 5000, 'We Provide you with Valuabe Insights', 5000
+  'End-to-End IoT Monitoring', 5000, 'We Provide you with Valuable Insights', 5000
 ]
 
 const sequence2 = [
@@ -31,7 +31,7 @@ const Header = () => {
           <button type='button' className='scale-up-center'>Our Services</button>
         </div>
       </div>
-      <div className="pisence__header-image">
+      <div className="pisence__header-image slide-in-right">
         <img src={monitoring} alt="monitoring" />
       </div>
     </div>

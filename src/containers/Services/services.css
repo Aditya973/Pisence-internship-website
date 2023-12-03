@@ -1,0 +1,51 @@
+.pisence__services {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.pisence__services-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.pisence__services-heading h1 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 62px;
+    line-height: 75px;
+}
+
+.pisence__services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pisence__services-container :nth-child(even) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+.pisence__services-container :nth-child(odd) {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width : 950px){
+
+    .pisence__services-heading h1 {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .pisence__services-container :nth-child(even) {
+        flex-direction: column;
+    }
+}
+

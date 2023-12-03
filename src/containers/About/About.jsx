@@ -1,37 +1,29 @@
 import React from 'react'
 import './about.css'
 import { Feature } from '../../components'
-import SavingsOutlinedIcon from '@mui/icons-material/SavingsOutlined';
-import CreditScoreOutlinedIcon from '@mui/icons-material/CreditScoreOutlined';
-import QueryStatsOutlinedIcon from '@mui/icons-material/QueryStatsOutlined';
-import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined';
 
 const featuresData = [
   {
     title: 'Comprehensive Solutions',
     text: 'we signify our commitment to providing comprehensive solutions tailored to your needs',
-    icon: BusinessCenterOutlinedIcon
   },
   {
     title: 'Professional Expertise',
     text: 'Our team of skilled professionals is equipped with the knowledge and experience to deliver top-notch services',
-    icon: CreditScoreOutlinedIcon
   },
   {
     title: 'Efficiency and Savings',
     text: 'We understand the importance of optimizing resources and ensuring a solid return on investment',
-    icon: SavingsOutlinedIcon
   },
   {
     title: 'Business Expansion',
     text: 'Leverage the power of analytics to identify growth opportunities and stay ahead in your industry.',
-    icon: QueryStatsOutlinedIcon
   },
 ]
 
 const About = () => {
   return (
-    <div className='pisence__about section__padding'>
+    <div className='pisence__about section__padding' id='about'>
       <div className="pisence__about-heading">
         <h1 className='gradient__text'>About Us</h1>
       </div>
@@ -43,7 +35,7 @@ const About = () => {
         </div>
         <div className="pisence__about-content__container">
           {featuresData.map((item,index) => (
-            <Feature title = {item.title} text = {item.text} key={item.title+index} icon={item.icon}/>
+            <Feature title = {item.title} text = {item.text} key={item.title+index}/>
           ))}
         </div>
       </div>

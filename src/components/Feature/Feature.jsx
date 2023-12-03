@@ -29,7 +29,7 @@ const Feature = ({title, text}) => {
     <div className='pisence__about-container__feature border-gradient border-gradient-purple flip-in-ver-right' onMouseEnter={()=>setToggle(true)} onMouseLeave={() => setToggle(false)}>
       {
         toggle
-         ? (<div className="pisence__about-container__feature-text">
+         ? (<div className="pisence__about-container__feature-text flip-in-ver-right">
               <p>{text}</p>
             </div>)
          : <>
