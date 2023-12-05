@@ -1,5 +1,20 @@
 import React from 'react'
 import './contacts.css';
+import { FaInstagram } from "react-icons/fa6";
+import { IoMail } from "react-icons/io5";
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoShareSocial } from "react-icons/io5";
+
+const getIconByName = (name) => {
+  switch (name) {
+    case 'Phone':
+      return <FaPhoneAlt />
+    case 'Mail':
+      return <IoMail />
+    case 'Stay In Touch':
+      return <IoShareSocial />
+  }
+}
 
 const contactData = [
   {
@@ -11,10 +26,24 @@ const contactData = [
     text: 'info.pisence@gmail.com'
   },
   {
-    title: 'Phone',
-    text: 'hi'
+    title: 'Stay In Touch',
+    text: <FaInstagram/>
   },
 ]
+
+const Contact = ({ title, text }) => (
+  <div className='pisence__contacts-container__contact' id='contact'>
+    <div className="pisence__contacts-container__contact-icon">
+      {getIconByName(title)}
+    </div>
+    <div className='pisence__contacts-container__contact-title'>
+      <p>{title}</p>
+    </div>
+    <div className='pisence__contacts-container__contact-text'>
+      <span>{text}</span>
+    </div>
+  </div>
+)
 
 const Contacts = () => {
   return (
@@ -25,7 +54,11 @@ const Contacts = () => {
       <div className="pisence__contacts-content">
         <p>Thank you for your interest in PiSence, your trusted partner in IoT monitoring services. We are excited to hear from you and discuss how our solutions can help your business thrive in the digital age. Whether you have questions, require further information, or want to explore a potential partnership, our dedicated team is ready to assist you.</p>
       </div>
-      
+      <div className="pisence__contacts-container">
+        {contactData.map((item, index) => (
+          <Contact title={item.title} text={item.text} />
+        ))}
+      </div>
     </div>
   )
 }

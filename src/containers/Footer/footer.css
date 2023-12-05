@@ -1,0 +1,130 @@
+.pisence__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    background : var(--color-footer);
+}
+
+.pisence__footer-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+}
+
+.pisence__footer-links div {
+    width: 250px;
+}
+
+.pisence__footer-links_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pisence__footer-links_logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.pisence__footer-links_div {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 0 2rem;
+}
+
+.pisence__footer-links_div h4 {
+    font-family: var(--font-family);
+    font-size: 18px;
+    line-height: 16px;
+    color: #ffffff;
+    /* text-align: left; */
+    
+    margin-bottom: 1rem;
+}
+
+.pisence__footer-links_div p {
+    font-family: var(--font-family);
+    font-size: 14px;
+    line-height: 14px;
+    color: #ffffff;
+
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.pisence__footer-copyright {
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.pisence__footer-copyright p {
+    font-family: var(--font-family);
+    font-size: 12px;
+    line-height: 14px;
+    color: #ffffff;
+}
+
+.pisence__footer-links__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 1rem 0;
+}
+
+.pisence__footer-links__contact-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.pisence__footer-links__contact-title span {
+    font-size: 20px;
+    list-style: 12px;
+    margin-right: 1rem;
+    color: yellow;
+}
+
+
+.pisence__footer-links__contact-title h5 {
+    font-family: var(--font-family);
+    font-size: 14px;
+    line-height: 14px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.pisence__footer-links__contact-text span{
+    font-family: var(--font-family);
+    font-size: 14px;
+    line-height: 14px;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1100px) {
+    .pisence__footer-links {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .pisence__footer-links_logo{
+        margin-bottom: 1rem;
+    }
+    .pisence__footer-links_div {
+        margin: 1rem 0;
+        justify-content: center;
+        text-align: center;
+    }
+    .pisence__footer-links__contact-title{
+        justify-content: center;
+    }
+}
