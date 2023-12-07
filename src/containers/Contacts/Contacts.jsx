@@ -4,6 +4,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoShareSocial } from "react-icons/io5";
+import { useInView } from 'react-intersection-observer';
 
 const getIconByName = (name) => {
   switch (name) {
@@ -27,12 +28,12 @@ const contactData = [
   },
   {
     title: 'Stay In Touch',
-    text: <FaInstagram/>
+    text: <FaInstagram style={{cursor: "pointer"}}/>
   },
 ]
 
-const Contact = ({ title, text }) => (
-  <div className='pisence__contacts-container__contact' id='contact'>
+const Contact = ({ title, text, contentVisible }) => (
+  <div className={`pisence__contacts-container__contact ${contentVisible ? 'scale-up-center' : ''}`}>
     <div className="pisence__contacts-container__contact-icon">
       {getIconByName(title)}
     </div>
@@ -46,8 +47,9 @@ const Contact = ({ title, text }) => (
 )
 
 const Contacts = () => {
+  const { ref: contentRef, inView: contentVisible } = useInView();
   return (
-    <div className='pisence__contacts section__padding section__margin'>
+    <div className='pisence__contacts section__padding section__margin' id='contact' ref={contentRef}>
       <div className="pisence__contacts-heading">
         <h1 className='gradient__text'>Get in Touch with Pisence</h1>
       </div>
@@ -56,7 +58,7 @@ const Contacts = () => {
       </div>
       <div className="pisence__contacts-container">
         {contactData.map((item, index) => (
-          <Contact title={item.title} text={item.text} />
+          <Contact title={item.title} text={item.text} contentVisible={contentVisible}/>
         ))}
       </div>
     </div>

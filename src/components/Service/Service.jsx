@@ -3,6 +3,7 @@ import './service.css';
 import iotService from '../../assets/iot_service.png'
 import schoolService from '../../assets/school_service.png'
 import analyticalService from '../../assets/analytical_service.png'
+import { useInView } from 'react-intersection-observer';
 
 const getImageFromName = (name) => {
   switch(name) {
@@ -19,9 +20,10 @@ const getImageFromName = (name) => {
 
 const Service = ({ title, text}) => {
   const image = getImageFromName(title);
+  const { ref: contentRef, inView: contentVisible } = useInView();
   return (
-    <div className="pisence__services-container__service">
-      <div className="pisence__services-container__service-content">
+    <div className="pisence__services-container__service" ref={contentRef}>
+      <div className={`pisence__services-container__service-content ${contentVisible ? 'fade-in-left' : ''}`}>
         <div className="pisence__services-container__service-content__heading">
           <h3>{title}</h3>
         </div>
@@ -29,7 +31,7 @@ const Service = ({ title, text}) => {
           <p>{text}</p>
         </div>
       </div>
-      <div className="pisence__services-container__service-image">
+      <div className={`pisence__services-container__service-image ${contentVisible ? 'fade-in-right' : ''}`}>
         <img src={image} alt="serviceImage" />
       </div>
     </div>

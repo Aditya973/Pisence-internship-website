@@ -3,6 +3,7 @@ import './footer.css';
 import logo from '../../assets/logo.png';
 import { MdOutlineMail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 
 const Contact = ({title, text, icon}) => {
   const Icon = icon;
@@ -33,10 +34,10 @@ const Footer = () => {
 
         <div className="pisence__footer-links_div">
           <h4>Explore Our Site</h4>
-          <p>Home</p>
-          <p>About Us</p>
-          <p>Offerings</p>
-          <p>Contact</p>
+          <p><a href="#home">Home</a></p>
+          <p><a href="#about">About Us</a></p>
+          <p><a href="#services">Offerings</a></p>
+          <p><a href="#contact">Contact</a></p>
         </div>
       </div>
       <div className="pisence__footer-copyright">

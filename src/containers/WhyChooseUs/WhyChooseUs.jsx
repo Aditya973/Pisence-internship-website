@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './whyChooseUs.css';
 import wcuImage from '../../assets/monitoring.svg'
 import { Accordion } from '../../components'
+import { useInView } from 'react-intersection-observer';
 
 const accordionData = [
   {
@@ -20,18 +21,19 @@ const accordionData = [
 
 const WhyChooseUs = () => {
   const [open,setOpen] = useState(0);
+  const { ref: contentRef, inView: contentVisible } = useInView();
   return (
     <div className='pisence__wcu section__padding'>
       <div className="pisence__wcu-heading">
         <h1 className='gradient__text'>Why Choose Us?</h1>
       </div>
-      <div className="pisence__wcu-content">
-        <div className="pisence__wcu-content__image">
+      <div className="pisence__wcu-content" ref={contentRef}>
+        <div className={`pisence__wcu-content__image ${contentVisible ? 'fade-in-left' : ''}`}>
           <img src={wcuImage} alt="wcuImage" />
         </div>
         <div className="pisence__wcu-content__container">
           {accordionData.map((item,index) => (
-            <Accordion title={item.title} text={item.text} key={index} indx={index} open={open} setOpen={setOpen}/>
+            <Accordion title={item.title} text={item.text} key={index} indx={index} open={open} setOpen={setOpen} contentVisible={contentVisible}/>
           ))}
         </div>
       </div>
