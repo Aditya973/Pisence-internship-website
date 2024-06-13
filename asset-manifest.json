@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Pisence-internship-website/static/css/main.cdb64b72.css",
+    "main.js": "/Pisence-internship-website/static/js/main.3814775b.js",
+    "static/media/analytical_service.png": "/Pisence-internship-website/static/media/analytical_service.8d4bd02df24e1fcabcc5.png",
+    "static/media/school_service.png": "/Pisence-internship-website/static/media/school_service.d3e7089db493723250a3.png",
+    "static/media/iot.png": "/Pisence-internship-website/static/media/iot.d55a4f83265675c519fe.png",
+    "static/media/iot_service.png": "/Pisence-internship-website/static/media/iot_service.888c2061f03f6967a607.png",
+    "static/media/monitoring.svg": "/Pisence-internship-website/static/media/monitoring.bcd5691da33ea8ce0ce49e566b8572d9.svg",
+    "static/media/logo.png": "/Pisence-internship-website/static/media/logo.18f0f66afa62b7516712.png",
+    "index.html": "/Pisence-internship-website/index.html",
+    "main.cdb64b72.css.map": "/Pisence-internship-website/static/css/main.cdb64b72.css.map",
+    "main.3814775b.js.map": "/Pisence-internship-website/static/js/main.3814775b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cdb64b72.css",
+    "static/js/main.3814775b.js"
+  ]
+}
